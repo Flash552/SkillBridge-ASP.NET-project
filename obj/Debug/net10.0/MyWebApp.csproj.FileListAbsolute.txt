@@ -124,3 +124,4 @@
 /Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/obj/Debug/net10.0/MyWebApp.csproj.AssemblyReference.cache
 /Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/obj/Debug/net10.0/MyWebApp.csproj.Up2Date
 /Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/obj/Debug/net10.0/compressed/im2ftyzx6l-{0}-f5po2eb96t-f5po2eb96t.gz
+/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/obj/Debug/net10.0/MyWebApp.sourcelink.json
