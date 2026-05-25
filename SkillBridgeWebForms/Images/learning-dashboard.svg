@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" role="img" aria-labelledby="title desc">
+  <title id="title">SkillBridge learning dashboard illustration</title>
+  <desc id="desc">A simple dashboard illustration showing progress cards, resources, and a video panel.</desc>
+  <rect width="900" height="560" rx="36" fill="#eef4ff"/>
+  <rect x="70" y="70" width="760" height="420" rx="28" fill="#ffffff"/>
+  <rect x="110" y="115" width="250" height="54" rx="16" fill="#2754d8"/>
+  <rect x="390" y="115" width="160" height="54" rx="16" fill="#dcfce7"/>
+  <rect x="575" y="115" width="215" height="54" rx="16" fill="#fef3c7"/>
+  <rect x="110" y="215" width="300" height="210" rx="22" fill="#dbeafe"/>
+  <polygon points="235,275 235,365 315,320" fill="#2754d8"/>
+  <rect x="455" y="215" width="335" height="38" rx="12" fill="#e2e8f0"/>
+  <rect x="455" y="275" width="250" height="28" rx="10" fill="#bfdbfe"/>
+  <rect x="455" y="325" width="300" height="28" rx="10" fill="#bbf7d0"/>
+  <rect x="455" y="375" width="210" height="28" rx="10" fill="#fde68a"/>
+  <circle cx="150" cy="142" r="10" fill="#ffffff"/>
+  <circle cx="180" cy="142" r="10" fill="#ffffff"/>
+  <circle cx="210" cy="142" r="10" fill="#ffffff"/>
+</svg>
