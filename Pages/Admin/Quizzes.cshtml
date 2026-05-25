@@ -1,0 +1,67 @@
+@page
+@model MyWebApp.Pages.Admin.QuizzesModel
+@{
+    ViewData["Title"] = "Manage Quizzes";
+}
+
+<h1>Manage Quizzes</h1>
+
+<div class="form-panel mb-4">
+    <h2 class="h4">Add Quiz</h2>
+    <form method="post" asp-page-handler="Save" class="row g-3">
+        <input type="hidden" name="QuizID" value="0" />
+        <div class="col-md-4">
+            <label class="form-label">Skill</label>
+            <select class="form-select" name="SkillID" required>
+                @foreach (var skill in Model.Skills)
+                {
+                    <option value="@skill.SkillID">@skill.SkillName</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-5">
+            <label class="form-label">Quiz Title</label>
+            <input class="form-control" name="QuizTitle" required />
+        </div>
+        <div class="col-md-3">
+            <label class="form-label">Total Marks</label>
+            <input class="form-control" name="TotalMarks" type="number" min="1" required />
+        </div>
+        <div class="col-12"><button class="btn btn-primary" type="submit">Add Quiz</button></div>
+    </form>
+</div>
+
+<div class="table-panel">
+    <table class="table align-middle mb-0">
+        <thead><tr><th>Quiz</th><th>Actions</th></tr></thead>
+        <tbody>
+            @foreach (var quiz in Model.Quizzes)
+            {
+                <tr>
+                    <td>
+                        <form method="post" asp-page-handler="Save" class="row g-2">
+                            <input type="hidden" name="QuizID" value="@quiz.QuizID" />
+                            <div class="col-md-3">
+                                <select class="form-select" name="SkillID">
+                                    @foreach (var skill in Model.Skills)
+                                    {
+                                        <option value="@skill.SkillID" selected="@(skill.SkillID == quiz.SkillID)">@skill.SkillName</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-6"><input class="form-control" name="QuizTitle" value="@quiz.QuizTitle" /></div>
+                            <div class="col-md-2"><input class="form-control" name="TotalMarks" type="number" value="@quiz.TotalMarks" /></div>
+                            <div class="col-md-1"><button class="btn btn-sm btn-outline-primary" type="submit">Save</button></div>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete">
+                            <input type="hidden" name="id" value="@quiz.QuizID" />
+                            <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

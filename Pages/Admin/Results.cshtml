@@ -1,0 +1,43 @@
+@page
+@model MyWebApp.Pages.Admin.ResultsModel
+@{
+    ViewData["Title"] = "Results and Activity";
+}
+
+<h1>Quiz Results and Activity</h1>
+
+<div class="section-card p-4 mb-4">
+    <h2 class="h4">Quiz Results</h2>
+    <table class="table">
+        <thead><tr><th>Member</th><th>Quiz</th><th>Score</th><th>Date</th></tr></thead>
+        <tbody>
+            @foreach (var result in Model.Results)
+            {
+                <tr>
+                    <td>@result.FullName</td>
+                    <td>@result.QuizTitle</td>
+                    <td>@result.Score / @result.TotalMarks</td>
+                    <td>@result.DateAttempted</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="section-card p-4">
+    <h2 class="h4">Recent Activity</h2>
+    <table class="table mb-0">
+        <thead><tr><th>User ID</th><th>Type</th><th>Description</th><th>Date</th></tr></thead>
+        <tbody>
+            @foreach (var activity in Model.Activities)
+            {
+                <tr>
+                    <td>@activity.UserID</td>
+                    <td>@activity.ActivityType</td>
+                    <td>@activity.Description</td>
+                    <td>@activity.ActivityDate</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

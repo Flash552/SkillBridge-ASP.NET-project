@@ -1,0 +1,43 @@
+@page
+@model MyWebApp.Pages.Member.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="form-panel">
+    <h1 class="h3 mb-4">Edit Profile</h1>
+    @if (Model.Message is not null)
+    {
+        <div class="alert alert-success">@Model.Message</div>
+    }
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Profile.FirstName" class="form-label"></label>
+                <input asp-for="Profile.FirstName" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Profile.LastName" class="form-label"></label>
+                <input asp-for="Profile.LastName" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Profile.Email" class="form-label"></label>
+                <input asp-for="Profile.Email" class="form-control" />
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Profile.Username" class="form-label"></label>
+                <input asp-for="Profile.Username" class="form-control" />
+            </div>
+            <div class="col-12">
+                <label asp-for="NewPassword" class="form-label">New Password (optional)</label>
+                <input asp-for="NewPassword" class="form-control" />
+            </div>
+        </div>
+        <button class="btn btn-primary mt-4" type="submit">Save Profile</button>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

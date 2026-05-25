@@ -1,0 +1,76 @@
+@page
+@model MyWebApp.Pages.Admin.QuestionsModel
+@{
+    ViewData["Title"] = "Manage Questions";
+}
+
+<h1>Manage Questions</h1>
+
+<div class="form-panel mb-4">
+    <h2 class="h4">Add Question</h2>
+    <form method="post" asp-page-handler="Save" class="row g-3">
+        <input type="hidden" name="QuestionID" value="0" />
+        <div class="col-12">
+            <label class="form-label">Quiz</label>
+            <select class="form-select" name="QuizID" required>
+                @foreach (var quiz in Model.Quizzes)
+                {
+                    <option value="@quiz.QuizID">@quiz.QuizTitle</option>
+                }
+            </select>
+        </div>
+        <div class="col-12"><label class="form-label">Question</label><input class="form-control" name="QuestionText" required /></div>
+        <div class="col-md-4"><label class="form-label">Option A</label><input class="form-control" name="OptionA" required /></div>
+        <div class="col-md-4"><label class="form-label">Option B</label><input class="form-control" name="OptionB" required /></div>
+        <div class="col-md-4"><label class="form-label">Option C</label><input class="form-control" name="OptionC" required /></div>
+        <div class="col-md-4">
+            <label class="form-label">Correct Answer</label>
+            <select class="form-select" name="CorrectAnswer"><option>A</option><option>B</option><option>C</option></select>
+        </div>
+        <div class="col-12"><button class="btn btn-primary" type="submit">Add Question</button></div>
+    </form>
+</div>
+
+<div class="table-panel">
+    <table class="table align-middle mb-0">
+        <thead><tr><th>Question</th><th>Actions</th></tr></thead>
+        <tbody>
+            @foreach (var question in Model.Questions)
+            {
+                <tr>
+                    <td>
+                        <form method="post" asp-page-handler="Save" class="row g-2">
+                            <input type="hidden" name="QuestionID" value="@question.QuestionID" />
+                            <div class="col-md-3">
+                                <select class="form-select" name="QuizID">
+                                    @foreach (var quiz in Model.Quizzes)
+                                    {
+                                        <option value="@quiz.QuizID" selected="@(quiz.QuizID == question.QuizID)">@quiz.QuizTitle</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-9"><input class="form-control" name="QuestionText" value="@question.QuestionText" /></div>
+                            <div class="col-md-3"><input class="form-control" name="OptionA" value="@question.OptionA" /></div>
+                            <div class="col-md-3"><input class="form-control" name="OptionB" value="@question.OptionB" /></div>
+                            <div class="col-md-3"><input class="form-control" name="OptionC" value="@question.OptionC" /></div>
+                            <div class="col-md-2">
+                                <select class="form-select" name="CorrectAnswer">
+                                    <option selected="@(question.CorrectAnswer == "A")">A</option>
+                                    <option selected="@(question.CorrectAnswer == "B")">B</option>
+                                    <option selected="@(question.CorrectAnswer == "C")">C</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1"><button class="btn btn-sm btn-outline-primary" type="submit">Save</button></div>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete">
+                            <input type="hidden" name="id" value="@question.QuestionID" />
+                            <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-7">
+            <span class="eyebrow mb-3 d-inline-block">Learn by skill</span>
+            <h1 class="display-4 fw-bold">Bridge the gap between study resources and real progress.</h1>
+            <p class="lead text-muted">
+                SkillBridge helps learners find videos, PDFs, links, and quizzes organised around skills like Programming, Maths, Design, and Communication.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mb-4">
+                <a class="btn btn-primary btn-lg" asp-page="/Resources/Index">Browse Resources</a>
+                <a class="btn btn-outline-primary btn-lg" asp-page="/Account/Register">Join as Member</a>
+            </div>
+            <div class="stat-strip">
+                <div class="stat-item">
+                    <span class="stat-value">4</span>
+                    <span class="text-muted">Skill areas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">8+</span>
+                    <span class="text-muted">Learning resources</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">20</span>
+                    <span class="text-muted">Quiz questions</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-5 mt-4 mt-lg-0">
+            <div class="section-card p-4">
+                <span class="skill-badge">Member tools</span>
+                <h2 class="h4 mt-3">Everything needed for the assignment workflow.</h2>
+                <div class="list-group list-group-flush mt-3">
+                    <div class="list-group-item px-0 bg-transparent">Attempt quizzes and save scores.</div>
+                    <div class="list-group-item px-0 bg-transparent">Track resources as in progress or completed.</div>
+                    <div class="list-group-item px-0 bg-transparent">Review learning history and update profile details.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mb-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <span class="eyebrow">Explore</span>
+            <h2 class="h3 mb-0">Skill Categories</h2>
+        </div>
+        <a class="btn btn-sm btn-outline-primary" asp-page="/Skills/Index">View all</a>
+    </div>
+    <div class="row g-3">
+        @foreach (var skill in Model.Skills)
+        {
+            <div class="col-md-6 col-lg-3">
+                <div class="section-card h-100 p-4">
+                    <span class="skill-badge">@skill.SkillName.Substring(0, 1)</span>
+                    <h3 class="h5">@skill.SkillName</h3>
+                    <p class="text-muted mb-0">@skill.Description</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
+
+<section>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+            <span class="eyebrow">Start learning</span>
+            <h2 class="h3 mb-0">Featured Resources</h2>
+        </div>
+        <a class="btn btn-sm btn-outline-primary" asp-page="/Resources/Index">Browse library</a>
+    </div>
+    <div class="row g-3">
+        @foreach (var resource in Model.FeaturedResources)
+        {
+            <div class="col-md-6">
+                <div class="resource-card h-100 p-4">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <span class="skill-badge">@resource.SkillName</span>
+                        <span class="type-pill type-@resource.Type.ToLowerInvariant()">@resource.Type</span>
+                    </div>
+                    <h3 class="h5 mt-3">@resource.Title</h3>
+                    <p class="text-muted">@resource.Description</p>
+                    <a class="btn btn-sm btn-outline-primary" asp-page="/Resources/Details" asp-route-id="@resource.ResourceID">Open Resource</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

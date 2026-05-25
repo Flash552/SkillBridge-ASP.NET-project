@@ -1,0 +1,69 @@
+@page
+@model MyWebApp.Pages.Member.DashboardModel
+@{
+    ViewData["Title"] = "Member Dashboard";
+}
+
+<div class="page-heading">
+    <span class="eyebrow">Member Area</span>
+    <h1 class="mb-2">Welcome back, @Model.FullName</h1>
+    <p class="text-muted mb-0">Continue learning, attempt quizzes, and track your SkillBridge progress.</p>
+</div>
+
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <span class="eyebrow">Progress</span>
+            <h2 class="h5 mt-2">Completed Resources</h2>
+            <p class="display-6 mb-0">@Model.CompletedCount</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <span class="eyebrow">Practice</span>
+            <h2 class="h5 mt-2">Quiz Attempts</h2>
+            <p class="display-6 mb-0">@Model.QuizAttempts</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="dashboard-card p-4">
+            <span class="eyebrow">Result</span>
+            <h2 class="h5 mt-2">Latest Score</h2>
+            <p class="display-6 mb-0">@Model.LatestScore</p>
+        </div>
+    </div>
+</div>
+
+<div class="row g-3">
+    <div class="col-lg-6">
+        <div class="section-card p-4 h-100">
+            <span class="eyebrow">Next step</span>
+            <h2 class="h4">Quick Actions</h2>
+            <p class="text-muted">Jump into the most common member tasks.</p>
+            <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-primary" asp-page="/Member/QuizCentre">Attempt Quiz</a>
+                <a class="btn btn-outline-primary" asp-page="/Resources/Index">Browse Resources</a>
+                <a class="btn btn-outline-secondary" asp-page="/Member/Profile">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="section-card p-4 h-100">
+            <span class="eyebrow">Timeline</span>
+            <h2 class="h4">Recent Activity</h2>
+            @if (Model.RecentActivities.Count == 0)
+            {
+                <p class="text-muted mb-0">No activity yet.</p>
+            }
+            else
+            {
+                <ul class="mb-0">
+                    @foreach (var activity in Model.RecentActivities)
+                    {
+                        <li>@activity.Description <span class="text-muted">(@activity.ActivityDate)</span></li>
+                    }
+                </ul>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+@page
+@model MyWebApp.Pages.Member.LearningHistoryModel
+@{
+    ViewData["Title"] = "Learning History";
+}
+
+<h1>Learning History</h1>
+<p class="text-muted">A record of your SkillBridge learning activity.</p>
+
+<div class="section-card p-4">
+    @if (Model.Activities.Count == 0)
+    {
+        <p class="text-muted mb-0">No history yet.</p>
+    }
+    else
+    {
+        <div class="list-group list-group-flush">
+            @foreach (var activity in Model.Activities)
+            {
+                <div class="list-group-item px-0">
+                    <strong>@activity.ActivityType</strong>
+                    <div>@activity.Description</div>
+                    <small class="text-muted">@activity.ActivityDate</small>
+                </div>
+            }
+        </div>
+    }
+</div>

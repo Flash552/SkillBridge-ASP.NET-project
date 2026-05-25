@@ -1,0 +1,52 @@
+@page
+@model MyWebApp.Pages.Account.RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="form-panel">
+    <h1 class="h3 mb-2">Create your SkillBridge account</h1>
+    <p class="text-muted mb-4">Register as a member to attempt quizzes and track your learning progress.</p>
+
+    <form method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label asp-for="Input.FirstName" class="form-label"></label>
+                <input asp-for="Input.FirstName" class="form-control" />
+                <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.LastName" class="form-label"></label>
+                <input asp-for="Input.LastName" class="form-control" />
+                <span asp-validation-for="Input.LastName" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.Email" class="form-label"></label>
+                <input asp-for="Input.Email" class="form-control" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.Username" class="form-label"></label>
+                <input asp-for="Input.Username" class="form-control" />
+                <span asp-validation-for="Input.Username" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.Password" class="form-label"></label>
+                <input asp-for="Input.Password" class="form-control" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="Input.ConfirmPassword" class="form-label"></label>
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+        <button class="btn btn-primary mt-4" type="submit">Register</button>
+        <a class="btn btn-link mt-4" asp-page="/Account/Login">Already have an account?</a>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

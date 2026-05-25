@@ -1,0 +1,132 @@
+is_global = true
+build_property.TargetFramework = net10.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v10.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyWebApp
+build_property.RootNamespace = MyWebApp
+build_property.ProjectDir = /Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 10.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 10.0
+build_property.EnableCodeStyleSeverity = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9Mb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Questions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUXVlc3Rpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Quizzes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUXVpenplcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Resources.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUmVzb3VyY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vUmVzdWx0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Skills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vU2tpbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQWRtaW4vVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/AttemptQuiz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL0F0dGVtcHRRdWl6LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL0Rhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/LearningHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL0xlYXJuaW5nSGlzdG9yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/MyProgress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL015UHJvZ3Jlc3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL1Byb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Member/QuizCentre.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTWVtYmVyL1F1aXpDZW50cmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Resources/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVzb3VyY2VzL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Resources/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVzb3VyY2VzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Skills/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2tpbGxzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/mohammedqamo/Desktop/help_student/Ayoub wep app/MyWebApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-tdy2x9681t

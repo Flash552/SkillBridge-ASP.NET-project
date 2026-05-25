@@ -1,0 +1,60 @@
+@page
+@model MyWebApp.Pages.Admin.UsersModel
+@{
+    ViewData["Title"] = "Manage Users";
+}
+
+<h1>Manage Users</h1>
+
+<div class="form-panel mb-4">
+    <h2 class="h4">Add User</h2>
+    <form method="post" asp-page-handler="Save" class="row g-3">
+        <input type="hidden" name="UserID" value="0" />
+        <div class="col-md-6"><label class="form-label">First Name</label><input class="form-control" name="FirstName" required /></div>
+        <div class="col-md-6"><label class="form-label">Last Name</label><input class="form-control" name="LastName" required /></div>
+        <div class="col-md-6"><label class="form-label">Email</label><input class="form-control" name="Email" type="email" required /></div>
+        <div class="col-md-6"><label class="form-label">Username</label><input class="form-control" name="Username" required /></div>
+        <div class="col-md-6"><label class="form-label">Password</label><input class="form-control" name="password" type="password" required /></div>
+        <div class="col-md-6">
+            <label class="form-label">Role</label>
+            <select class="form-select" name="Role"><option>Member</option><option>Admin</option></select>
+        </div>
+        <div class="col-12"><button class="btn btn-primary" type="submit">Add User</button></div>
+    </form>
+</div>
+
+<div class="table-panel">
+    <table class="table align-middle mb-0">
+        <thead><tr><th>User</th><th>Actions</th></tr></thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>
+                        <form method="post" asp-page-handler="Save" class="row g-2">
+                            <input type="hidden" name="UserID" value="@user.UserID" />
+                            <div class="col-md-2"><input class="form-control" name="FirstName" value="@user.FirstName" /></div>
+                            <div class="col-md-2"><input class="form-control" name="LastName" value="@user.LastName" /></div>
+                            <div class="col-md-3"><input class="form-control" name="Email" value="@user.Email" /></div>
+                            <div class="col-md-2"><input class="form-control" name="Username" value="@user.Username" /></div>
+                            <div class="col-md-2">
+                                <select class="form-select" name="Role">
+                                    <option selected="@(user.Role == "Member")">Member</option>
+                                    <option selected="@(user.Role == "Admin")">Admin</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1"><button class="btn btn-sm btn-outline-primary" type="submit">Save</button></div>
+                            <div class="col-md-4"><input class="form-control" name="password" type="password" placeholder="New password optional" /></div>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete">
+                            <input type="hidden" name="id" value="@user.UserID" />
+                            <button class="btn btn-sm btn-outline-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
